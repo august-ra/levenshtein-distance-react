@@ -1,0 +1,85 @@
+#root {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+
+  padding: 8px;
+  min-height: 90vh;
+
+  &.left {
+    width: 450px;
+  }
+
+  &.right {
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+
+.inputs {
+  padding: 8px;
+
+  display: flex;
+  gap: 32px;
+}
+
+.result {
+  padding: 8px;
+
+  display: flex;
+  gap: 32px;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: monospace;
+}
+
+tr.last {
+  color: GrayText;
+  border-top: 1px solid maroon;
+
+  & span {
+    font-size: 6px;
+  }
+}
+
+th, td {
+  padding-inline: 4px;
+}
+
+th {
+  text-align: center;
+
+  &:first-child {
+    border-right: 1px solid maroon;
+  }
+
+  tr.first & {
+    border-bottom: 1px solid maroon;
+  }
+
+  & div.space {
+    border: 1px solid silver;
+  }
+
+  &.similar {
+    color: lightgreen;
+  }
+
+  &.difference {
+    color: plum;
+  }
+}
+
+td {
+  text-align: right;
+  font-family: monospace;
+
+  &.selected {
+    color: dodgerblue;
+  }
+}
